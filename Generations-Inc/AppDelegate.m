@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "EventDataController.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    UpcomingEventsMasterViewController *firstViewController = (UpcomingEventsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
+//    
+//    EventDataController *aDataController = [[EventDataController alloc] init];
+//    firstViewController.dataController = aDataController;
     return YES;
 }
 							

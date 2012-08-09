@@ -1,18 +1,19 @@
 //
-//  MyEventsViewController.m
+//  NewsfeedViewController.m
 //  Generations-Inc
 //
 //  Created by Andrew Davis on 8/8/12.
 //  Copyright (c) 2012 Enginerds. All rights reserved.
 //
 
-#import "MyEventsViewController.h"
+#import "NewsfeedViewController.h"
 
-@interface MyEventsViewController ()
+@interface NewsfeedViewController ()
 
 @end
 
-@implementation MyEventsViewController
+@implementation NewsfeedViewController
+@synthesize newsfeedWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,18 +27,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSString *urlAddress = @"http://generationsinc.org/blog";
+    
+    //Create a URL object.
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    
+    //URL Requst Object
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    
+    //Load the request in the UIWebView.
+    [newsfeedWebView loadRequest:requestObj];
+	
 }
 
 - (void)viewDidUnload
 {
+    [self setNewsfeedWebView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
 
 @end

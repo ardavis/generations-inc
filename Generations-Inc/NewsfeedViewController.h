@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewsfeedViewController.h
 //  Generations-Inc
 //
 //  Created by Andrew Davis on 8/8/12.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NewsfeedViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *newsfeedWebView;
 
 @end
