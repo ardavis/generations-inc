@@ -16,6 +16,6 @@
 
 - (NSUInteger)countOfList;
 - (Event *)objectInListAtIndex:(NSUInteger)theIndex;
-- (void)addEventWithName:(NSString *)inputName location:(NSString *)inputLocation desc:(NSString *)inputDesc;
+- (void)addEventWithName:(NSString *)inputName location:(NSString *)inputLocation desc:(NSString *)inputDesc date:(NSDate *)inputDate;
 
 @end

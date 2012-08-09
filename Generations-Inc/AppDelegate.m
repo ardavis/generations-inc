@@ -8,17 +8,18 @@
 
 #import "AppDelegate.h"
 #import "EventDataController.h"
+#import "EventsMasterViewController.h"
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-//    UpcomingEventsMasterViewController *firstViewController = (UpcomingEventsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
-//    
-//    EventDataController *aDataController = [[EventDataController alloc] init];
-//    firstViewController.dataController = aDataController;
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    EventsMasterViewController *firstViewController = (EventsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    
+    EventDataController *aDataController = [[EventDataController alloc] init];
+    firstViewController.dataController = aDataController;
     return YES;
 }
 							

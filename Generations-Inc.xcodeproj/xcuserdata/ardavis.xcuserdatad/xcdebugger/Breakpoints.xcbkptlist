@@ -46,26 +46,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "EventsMasterViewController.m"
-         timestampString = "366238543.544921"
+         filePath = "Generations-Inc/EventDataController.m"
+         timestampString = "366246586.853628"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "EventsMasterViewController.m"
-         timestampString = "366238979.500278"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "55"
-         endingLineNumber = "55"
-         landmarkName = "-tableView:numberOfRowsInSection:"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
+         landmarkName = "-countOfList"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

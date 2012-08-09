@@ -75,21 +75,13 @@
 	}
 	
 	// Set up the cell...
-    cell.textLabel.text = [NSString stringWithFormat: @"Row %d", indexPath.row];
-    cell.detailTextLabel.text = @"Test";
+    Event *myEvent = [self.dataController objectInListAtIndex:indexPath.row];
+    cell.textLabel.text = myEvent.name;
+    cell.detailTextLabel.text = myEvent.location;
 	
 	return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return @"Top";
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
-{
-	return @"Bottom";
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

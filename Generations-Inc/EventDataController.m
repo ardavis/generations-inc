@@ -26,11 +26,15 @@
 }
 
 - (void)initializeDefaultDataList {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    
     NSMutableArray *eventList = [[NSMutableArray alloc] init];
     self.masterEventList = eventList;
-    [self addEventWithName:@"Coffee Club" location:@"Your House" desc:@"Drink Coffee all day long!!!"];
-    [self addEventWithName:@"Walking Club" location:@"The park" desc:@"Let's walk until we can't!"];
-    [self addEventWithName:@"Reading Club" location:@"Library" desc:@"Tolkien day!"];
+    [self addEventWithName:@"Coffee Club" location:@"Your House" desc:@"Drink Coffee all day long!!!" date:[dateFormatter dateFromString:@"01-02-2012"]];
+    [self addEventWithName:@"Walking Club" location:@"The park" desc:@"Let's walk until we can't!" date:[dateFormatter dateFromString:@"08-11-2012"]];
+    [self addEventWithName:@"Reading Club" location:@"Library" desc:@"Tolkien day!" date: [dateFormatter dateFromString:@"09-30-2012"]];
 }
 
 - (void)setMasterEventList:(NSMutableArray *)newList {
@@ -47,7 +51,7 @@
     return [self.masterEventList objectAtIndex:theIndex];
 }
 
-- (void)addBirdSightingWithName:(NSString *)inputName location:(NSString *)inputLocation desc:(NSString *)inputDesc date:(NSDate *)inputDate{
+- (void)addEventWithName:(NSString *)inputName location:(NSString *)inputLocation desc:(NSString *)inputDesc date:(NSDate *)inputDate{
     Event *event;
     event = [[Event alloc] initWithName:inputName location:inputLocation desc:inputDesc date:inputDate];
     [self.masterEventList addObject:event];

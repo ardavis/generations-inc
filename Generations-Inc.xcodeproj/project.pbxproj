@@ -94,9 +94,9 @@
 				EB4D613015D4475D003E83E2 /* EventsMasterViewController.h */,
 				EB4D613115D4475D003E83E2 /* EventsMasterViewController.m */,
 				EB4D612315D3425C003E83E2 /* Event.h */,
+				EB4D612415D3425C003E83E2 /* Event.m */,
 				EB4D612615D359F5003E83E2 /* EventDataController.h */,
 				EB4D612715D359F5003E83E2 /* EventDataController.m */,
-				EB4D612415D3425C003E83E2 /* Event.m */,
 				EB4D610715D30DCE003E83E2 /* Supporting Files */,
 			);
 			path = "Generations-Inc";
