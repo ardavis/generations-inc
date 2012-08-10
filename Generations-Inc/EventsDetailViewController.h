@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class Event;
+@class EventDataController;
 
 @interface EventsDetailViewController : UIViewController
 
@@ -16,5 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (weak, nonatomic) EventDataController *myEvents;
+@property (weak, nonatomic) EventDataController *upcomingEvents;
+@property (weak, nonatomic) EventDataController *bookmarkedEvents;
 
 @end
