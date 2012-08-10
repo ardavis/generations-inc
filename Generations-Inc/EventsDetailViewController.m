@@ -1,0 +1,75 @@
+//
+//  EventsDetailViewController.m
+//  Generations-Inc
+//
+//  Created by Andrew Davis on 8/10/12.
+//  Copyright (c) 2012 Enginerds. All rights reserved.
+//
+
+#import "EventsDetailViewController.h"
+#import "Event.h"
+
+@interface EventsDetailViewController ()
+
+@end
+
+@implementation EventsDetailViewController
+
+@synthesize event = _event, nameLabel = _nameLabel, locationLabel = _locationLabel, descLabel = _descLabel, dateLabel = _dateLabel;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [self configureView];
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)viewDidUnload
+{
+    self.event = nil;
+    [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
+}
+
+- (void)setEvent:(Event *) newEvent
+{
+    if (_event != newEvent) {
+        _event = newEvent;
+        
+        // Update the view.
+        [self configureView];
+    }
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item.
+    Event *theEvent = self.event;
+    
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+    }
+    if (theEvent) {
+        self.nameLabel.text = theEvent.name;
+        self.locationLabel.text = theEvent.location;
+        self.descLabel.text = theEvent.desc;
+        self.dateLabel.text = [formatter stringFromDate:(NSDate *)theEvent.date];
+    }
+}
+
+@end

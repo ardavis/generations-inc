@@ -18,8 +18,15 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     EventsMasterViewController *firstViewController = (EventsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
     
-    EventDataController *aDataController = [[EventDataController alloc] init];
-    firstViewController.dataController = aDataController;
+    EventDataController *_myEventsDataController = [[EventDataController alloc] init];
+    firstViewController.myEventsDataController = _myEventsDataController;
+    
+    EventDataController *_upcomingEventsDataController = [[EventDataController alloc] init];
+    firstViewController.upcomingEventsDataController = _upcomingEventsDataController;
+    
+    EventDataController *_bookmarkedEventsDataController = [[EventDataController alloc] init];
+    firstViewController.bookmarkedEventsDataController = _bookmarkedEventsDataController;
+    
     return YES;
 }
 							

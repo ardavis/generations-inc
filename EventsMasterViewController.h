@@ -17,6 +17,9 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *eventsTableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *navControl;
-@property (strong, nonatomic) EventDataController *dataController;
+@property (strong, nonatomic) EventDataController *myEventsDataController;
+@property (strong, nonatomic) EventDataController *upcomingEventsDataController;
+@property (strong, nonatomic) EventDataController *bookmarkedEventsDataController;
 
+- (IBAction)segmentSelected:(UISegmentedControl *)sender;
 @end
