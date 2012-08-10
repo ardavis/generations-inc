@@ -172,6 +172,8 @@
                         <outlet property="dateLabel" destination="sXW-oa-faM" id="QH3-bO-mGb"/>
                         <outlet property="descLabel" destination="PmL-Zi-z2x" id="VFH-KZ-GLX"/>
                         <outlet property="locationLabel" destination="kiZ-qg-aef" id="FH2-Uf-AG3"/>
+                        <outlet property="noButton" destination="1JH-vN-eZi" id="QKV-N8-Hga"/>
+                        <outlet property="yesButton" destination="JGZ-nl-z1x" id="5JC-Ho-Hc0"/>
                     </connections>
                 </viewController>
             </objects>
@@ -246,6 +248,32 @@
             <point key="canvasLocation" x="1006" y="-1172"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EventsDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="descLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="noButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="yesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EventsMasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segmentSelected:" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="eventsTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="navControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="NewsfeedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsfeedViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="newsfeedWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

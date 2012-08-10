@@ -14,6 +14,8 @@
 @end
 
 @implementation EventsDetailViewController
+@synthesize noButton = _noButton;
+@synthesize yesButton = _yesButton;
 
 @synthesize event = _event, locationLabel = _locationLabel, descLabel = _descLabel, dateLabel = _dateLabel;
 
@@ -36,6 +38,8 @@
 - (void)viewDidUnload
 {
     self.event = nil;
+    [self setYesButton:nil];
+    [self setNoButton:nil];
     [super viewDidUnload];
 }
 

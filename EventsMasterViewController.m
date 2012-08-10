@@ -58,15 +58,15 @@
     
     // Sample Data
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
-    [self.upcomingEventsDataController addEventWithName:@"Coffee Club" location:@"Your House" desc:@"Drink Coffee all day long!!!" date:[dateFormatter dateFromString:@"01-02-2012"]];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+    [self.upcomingEventsDataController addEventWithName:@"Coffee Club" location:@"Your House" desc:@"Drink Coffee all day long!!!" date:[dateFormatter dateFromString:@"01-02-2012 08:22"]];
     [self.upcomingEventsDataController addEventWithName:@"Walking Club" location:@"The park" desc:@"Let's walk until we can't!" date:[dateFormatter dateFromString:@"08-11-2012"]];
     [self.upcomingEventsDataController addEventWithName:@"Reading Club" location:@"Library" desc:@"Tolkien day!" date:[dateFormatter dateFromString:@"09-30-2012"]];
     
     [self.myEventsDataController addEventWithName:@"Batman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
     [self.myEventsDataController addEventWithName:@"Superman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
     
-    [self.bookmarkedEventsDataController addEventWithName:@"Test Bookmarks!" location:@"Book" desc:@"Awesome Book right?" date:[dateFormatter dateFromString:@"01-10-1991"]];
+    [self.bookmarkedEventsDataController addEventWithName:@"Spiderman!" location:@"Book" desc:@"Awesome Book right?" date:[dateFormatter dateFromString:@"01-10-1991"]];
     
 }
 
