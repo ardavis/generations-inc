@@ -59,9 +59,13 @@
     // Sample Data
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];
-    [self.upcomingEventsDataController addEventWithName:@"Coffee Club" location:@"Your House" desc:@"Drink Coffee all day long!!!" date:[dateFormatter dateFromString:@"01-02-2012"]];
-    [self.upcomingEventsDataController addEventWithName:@"Walking Club" location:@"The park" desc:@"Let's walk until we can't!" date:[dateFormatter dateFromString:@"08-11-2012"]];
-    [self.upcomingEventsDataController addEventWithName:@"Reading Club" location:@"Library" desc:@"Tolkien day!" date:[dateFormatter dateFromString:@"09-30-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Crafternoon" location:@"Dudley Sq. Lib." desc:@"" date:[dateFormatter dateFromString:@"08-01-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Computer Help" location:@"Kingston St." desc:@"" date:[dateFormatter dateFromString:@"08-01-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Disco Night" location:@"City Hall Plaza" desc:@"" date:[dateFormatter dateFromString:@"08-01-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Marilyn Monroe Lecture" location:@"BPL-Copley" desc:@"" date:[dateFormatter dateFromString:@"08-02-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Walking Club" location:@"Franklin Park" desc:@"" date:[dateFormatter dateFromString:@"08-03-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Museum of Fine Arts Visit" location:@"" desc:@"" date:[dateFormatter dateFromString:@"08-03-2012"]];
+    [self.upcomingEventsDataController addEventWithName:@"Boston Urban Musical Festival" location:@"City Hall Plaza" desc:@"" date:[dateFormatter dateFromString:@"08-04-2012"]];
     
     [self.myEventsDataController addEventWithName:@"Batman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
     [self.myEventsDataController addEventWithName:@"Superman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
