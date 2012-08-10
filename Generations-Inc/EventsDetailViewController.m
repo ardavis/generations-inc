@@ -15,7 +15,7 @@
 
 @implementation EventsDetailViewController
 
-@synthesize event = _event, nameLabel = _nameLabel, locationLabel = _locationLabel, descLabel = _descLabel, dateLabel = _dateLabel;
+@synthesize event = _event, locationLabel = _locationLabel, descLabel = _descLabel, dateLabel = _dateLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,10 +65,13 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
     }
     if (theEvent) {
-        self.nameLabel.text = theEvent.name;
+        self.navigationItem.title = theEvent.name;
         self.locationLabel.text = theEvent.location;
         self.descLabel.text = theEvent.desc;
         self.dateLabel.text = [formatter stringFromDate:(NSDate *)theEvent.date];
+        // Set image
+        // Set map
+        // Set attendees
     }
 }
 

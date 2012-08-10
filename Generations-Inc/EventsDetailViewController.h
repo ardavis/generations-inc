@@ -13,7 +13,6 @@
 @interface EventsDetailViewController : UIViewController
 
 @property (strong, nonatomic) Event *event;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

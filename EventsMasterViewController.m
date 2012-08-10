@@ -7,6 +7,7 @@
 //
 
 #import "EventsMasterViewController.h"
+#import "EventsDetailViewController.h"
 #import "EventDataController.h"
 #import "Event.h"
 #import "Constants.h"
@@ -137,6 +138,26 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ShowEventDetails"]) {
+        EventsDetailViewController *detailViewController = [segue destinationViewController];
+        
+        switch (self.currentDataController) {
+            case MY_EVENTS:
+                detailViewController.event = [self.myEventsDataController objectInListAtIndex:[self.eventsTableView indexPathForSelectedRow].row];
+                break;
+            case UPCOMING_EVENTS:
+                detailViewController.event = [self.upcomingEventsDataController objectInListAtIndex:[self.eventsTableView indexPathForSelectedRow].row];
+                break;
+            case BOOKMARKED_EVENTS:
+                detailViewController.event = [self.bookmarkedEventsDataController objectInListAtIndex:[self.eventsTableView indexPathForSelectedRow].row];
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 - (IBAction)segmentSelected:(UISegmentedControl *)sender {

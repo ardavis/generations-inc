@@ -19,6 +19,7 @@
 		EB4D612815D359F5003E83E2 /* EventDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4D612715D359F5003E83E2 /* EventDataController.m */; };
 		EB4D613215D4475D003E83E2 /* EventsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4D613115D4475D003E83E2 /* EventsMasterViewController.m */; };
 		EB4D614215D4CEA9003E83E2 /* EventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4D614115D4CEA9003E83E2 /* EventsDetailViewController.m */; };
+		EB4D614415D4D80F003E83E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4D614315D4D80E003E83E2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EB4D613315D4A775003E83E2 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		EB4D614015D4CEA8003E83E2 /* EventsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetailViewController.h; sourceTree = "<group>"; };
 		EB4D614115D4CEA9003E83E2 /* EventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetailViewController.m; sourceTree = "<group>"; };
+		EB4D614315D4D80E003E83E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4D614415D4D80F003E83E2 /* MapKit.framework in Frameworks */,
 				EB4D610115D30DCE003E83E2 /* UIKit.framework in Frameworks */,
 				EB4D610315D30DCE003E83E2 /* Foundation.framework in Frameworks */,
 				EB4D610515D30DCE003E83E2 /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +66,7 @@
 		EB4D60F115D30DCE003E83E2 = {
 			isa = PBXGroup;
 			children = (
+				EB4D614315D4D80E003E83E2 /* MapKit.framework */,
 				EB4D610615D30DCE003E83E2 /* Generations-Inc */,
 				EB4D60FF15D30DCE003E83E2 /* Frameworks */,
 				EB4D60FD15D30DCE003E83E2 /* Products */,
