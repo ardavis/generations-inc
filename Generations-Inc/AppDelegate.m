@@ -15,18 +15,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    
+    /*NSLog(@"0");
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
+    NSLog(@"1");
+
+    UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
     EventsMasterViewController *firstViewController = (EventsMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    
+    NSLog(@"2");
+    
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
+    NSLog(@"3");
     
     EventDataController *_myEventsDataController = [[EventDataController alloc] init];
     firstViewController.myEventsDataController = _myEventsDataController;
     
+    NSLog(@"4");
+    
     EventDataController *_upcomingEventsDataController = [[EventDataController alloc] init];
     firstViewController.upcomingEventsDataController = _upcomingEventsDataController;
+    
+    NSLog(@"5");
     
     EventDataController *_bookmarkedEventsDataController = [[EventDataController alloc] init];
     firstViewController.bookmarkedEventsDataController = _bookmarkedEventsDataController;
     
+    NSLog(@"6");
+    */
     return YES;
 }
 							

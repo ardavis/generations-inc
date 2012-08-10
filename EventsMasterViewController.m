@@ -39,6 +39,16 @@
     [super viewDidLoad];
     self.currentDataController = MY_EVENTS;
     
+    // This should be in the AppDelegate I think...
+    EventDataController *myEventsDataController = [[EventDataController alloc] init];
+    self.myEventsDataController = myEventsDataController;
+    
+    EventDataController *upcomingEventsDataController = [[EventDataController alloc] init];
+    self.upcomingEventsDataController = upcomingEventsDataController;
+    
+    EventDataController *bookmarkedEventsDataController = [[EventDataController alloc] init];
+    self.bookmarkedEventsDataController = bookmarkedEventsDataController;
+    
     // Pull new events from Google Calendar
     
     // Get the current data controller from the filter selected
@@ -111,12 +121,15 @@
 	// Set up the cell
     switch (self.currentDataController) {
         case MY_EVENTS:
+            //NSLog(@"My Events: %d", [self.myEventsDataController countOfList]);
             myEvent = [self.myEventsDataController objectInListAtIndex:indexPath.row];
             break;
         case UPCOMING_EVENTS:
+            //NSLog(@"Upcoming Events: %d", [self.upcomingEventsDataController countOfList]);
             myEvent = [self.upcomingEventsDataController objectInListAtIndex:indexPath.row];
             break;
         case BOOKMARKED_EVENTS:
+            //NSLog(@"Bookmarked Events: %d", [self.bookmarkedEventsDataController countOfList]);
             myEvent = [self.bookmarkedEventsDataController objectInListAtIndex:indexPath.row];
             break;
         default:
