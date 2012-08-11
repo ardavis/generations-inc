@@ -12,7 +12,7 @@
 #import "Event.h"
 #import "Constants.h"
 
-@interface EventsMasterViewController()
+@interface EventsMasterViewController() <EventsDetailViewControllerDelegate>
 @property (nonatomic) NSInteger currentDataController;
 @end
 
@@ -67,10 +67,10 @@
     [self.upcomingEventsDataController addEventWithName:@"Museum of Fine Arts Visit" location:@"" desc:@"" date:[dateFormatter dateFromString:@"08-03-2012"]];
     [self.upcomingEventsDataController addEventWithName:@"Boston Urban Musical Festival" location:@"City Hall Plaza" desc:@"" date:[dateFormatter dateFromString:@"08-04-2012"]];
     
-    [self.myEventsDataController addEventWithName:@"Batman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
-    [self.myEventsDataController addEventWithName:@"Superman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
+    //[self.myEventsDataController addEventWithName:@"Batman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
+    //[self.myEventsDataController addEventWithName:@"Superman" location:@"Your Mom" desc:@"Your Mom again..." date:[dateFormatter dateFromString:@"12-31-2012"]];
     
-    [self.bookmarkedEventsDataController addEventWithName:@"Spiderman!" location:@"Book" desc:@"Awesome Book right?" date:[dateFormatter dateFromString:@"01-10-1991"]];
+    //[self.bookmarkedEventsDataController addEventWithName:@"Spiderman!" location:@"Book" desc:@"Awesome Book right?" date:[dateFormatter dateFromString:@"01-10-1991"]];
     
 }
 
@@ -174,6 +174,8 @@
             default:
                 break;
         }
+        
+        detailViewController.delegate = self;
     }
 }
 
@@ -181,6 +183,28 @@
     // Update the currentDataController
     self.currentDataController = [sender selectedSegmentIndex];
     [self.eventsTableView reloadData];
+}
+
+- (void)eventsViewControllerDidCancel:(EventsDetailViewController *)controller event:(Event *)event {
+    [self.myEventsDataController removeEvent:event];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.eventsTableView reloadData];
+    [self.navControl setSelectedSegmentIndex:UPCOMING_EVENTS];
+}
+
+- (void)eventsViewControllerDidRegister:(EventsDetailViewController *)controller name:(NSString *)name location:(NSString *)location desc:(NSString *)desc date:(NSDate *)date {
+    
+    [self.myEventsDataController addEventWithName:name location:location desc:desc date:date];
+    [self.navControl setSelectedSegmentIndex:MY_EVENTS];
+    [self.eventsTableView reloadData];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)eventsViewControllerDidBookmark:(EventsDetailViewController *)controller name:(NSString *)name location:(NSString *)location desc:(NSString *)desc date:(NSDate *)date {
+    [self.bookmarkedEventsDataController addEventWithName:name location:location desc:desc date:date];
+    [self.navControl setSelectedSegmentIndex:BOOKMARKED_EVENTS];
+    [self.eventsTableView reloadData];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

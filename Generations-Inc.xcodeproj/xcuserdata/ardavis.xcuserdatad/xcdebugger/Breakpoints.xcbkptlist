@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EventsMasterViewController.m"
-         timestampString = "366319917.713546"
+         timestampString = "366321994.82288"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EventsMasterViewController.m"
-         timestampString = "366319917.713546"
+         timestampString = "366321994.82288"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "180"
-         endingLineNumber = "180"
+         startingLineNumber = "173"
+         endingLineNumber = "173"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "EventsMasterViewController.m"
-         timestampString = "366319917.713546"
+         timestampString = "366321994.82288"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "125"
-         endingLineNumber = "125"
+         startingLineNumber = "118"
+         endingLineNumber = "118"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -98,27 +98,40 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Generations-Inc/EventsDetailViewController.m"
-         timestampString = "366273520.214601"
+         filePath = "Generations-Inc/EventsDetailViewController.h"
+         timestampString = "366348053.702086"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
-         landmarkName = "-setEvent:"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "locationLabel"
+         landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "EventsMasterViewController.m"
+         timestampString = "366348164.852089"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "197"
+         endingLineNumber = "197"
+         landmarkName = "-eventsViewControllerDidRegister:name:location:desc:date:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Generations-Inc/EventsDetailViewController.h"
-         timestampString = "366272802.208489"
+         filePath = "EventsMasterViewController.m"
+         timestampString = "366330192.78879"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "17"
-         endingLineNumber = "17"
-         landmarkName = "locationLabel"
-         landmarkType = "19">
+         startingLineNumber = "189"
+         endingLineNumber = "189"
+         landmarkName = "-eventsViewControllerDidCancel:event:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
