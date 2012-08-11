@@ -111,15 +111,15 @@
 #pragma mark UITableViewDataSource
 
 // Customize the appearance of table view cells.
-- (EventCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Event *myEvent;
     NSString *CellIdentifier = @"EventCell";
     EventCell *cell = (EventCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     
-//    if (!cell)
-//    {
+    if (!cell)
+    {
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"EventCell" owner:nil options:nil];
         
         for (id currentObject in topLevelObjects)
@@ -130,19 +130,16 @@
                 break;
             }
         }
-//    }
+    }
     
     switch (self.currentDataController) {
         case MY_EVENTS:
-            //NSLog(@"My Events: %d", [self.myEventsDataController countOfList]);
             myEvent = [self.myEventsDataController objectInListAtIndex:indexPath.row];
             break;
         case UPCOMING_EVENTS:
-            //NSLog(@"Upcoming Events: %d", [self.upcomingEventsDataController countOfList]);
             myEvent = [self.upcomingEventsDataController objectInListAtIndex:indexPath.row];
             break;
         case BOOKMARKED_EVENTS:
-            //NSLog(@"Bookmarked Events: %d", [self.bookmarkedEventsDataController countOfList]);
             myEvent = [self.bookmarkedEventsDataController objectInListAtIndex:indexPath.row];
             break;
         default:
@@ -158,15 +155,6 @@
     cell.typeLabel.text = @"Social";
     
 	return cell;
-    
-	/*UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-	
-	
-     */
 }
 
 
