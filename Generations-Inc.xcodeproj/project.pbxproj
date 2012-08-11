@@ -24,6 +24,7 @@
 		EB4D615115D60056003E83E2 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4D615015D60056003E83E2 /* ContactsViewController.m */; };
 		EB4D615315D61B50003E83E2 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4D615215D61B4F003E83E2 /* EventCell.xib */; };
 		EB4D615615D61B7B003E83E2 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4D615515D61B7A003E83E2 /* EventCell.m */; };
+		EB506A0115D6B63E00939F04 /* event_image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB506A0015D6B63E00939F04 /* event_image.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		EB4D615215D61B4F003E83E2 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		EB4D615415D61B7A003E83E2 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
 		EB4D615515D61B7A003E83E2 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		EB506A0015D6B63E00939F04 /* event_image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = event_image.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		EB4D610615D30DCE003E83E2 /* Generations-Inc */ = {
 			isa = PBXGroup;
 			children = (
+				EB506A0015D6B63E00939F04 /* event_image.jpeg */,
 				EB4D614D15D5FF40003E83E2 /* gi_logo.jpeg */,
 				EB4D610F15D30DCE003E83E2 /* AppDelegate.h */,
 				EB4D611015D30DCE003E83E2 /* AppDelegate.m */,
@@ -195,6 +198,7 @@
 				EB4D611415D30DCE003E83E2 /* MainStoryboard.storyboard in Resources */,
 				EB4D614E15D5FF41003E83E2 /* gi_logo.jpeg in Resources */,
 				EB4D615315D61B50003E83E2 /* EventCell.xib in Resources */,
+				EB506A0115D6B63E00939F04 /* event_image.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +335,7 @@
 				EB4D611C15D30DCE003E83E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

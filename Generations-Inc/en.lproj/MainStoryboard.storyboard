@@ -129,7 +129,7 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="tX4-xF-vGh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="event_image.jpeg" id="tX4-xF-vGh">
                                 <rect key="frame" x="20" y="20" width="488" height="272"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -399,6 +399,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="event_image.jpeg" width="500" height="333"/>
         <image name="gi_logo.jpeg" width="453" height="504"/>
     </resources>
     <classes>

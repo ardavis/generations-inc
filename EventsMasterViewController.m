@@ -199,23 +199,29 @@
 - (void)eventsViewControllerDidCancel:(EventsDetailViewController *)controller event:(Event *)event {
     [self.myEventsDataController removeEvent:event];
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [self.eventsTableView reloadData];
+    self.currentDataController = UPCOMING_EVENTS;
     [self.navControl setSelectedSegmentIndex:UPCOMING_EVENTS];
+    [self.eventsTableView reloadData];
+    [self.eventsTableView reloadData];
 }
 
 - (void)eventsViewControllerDidRegister:(EventsDetailViewController *)controller name:(NSString *)name location:(NSString *)location desc:(NSString *)desc date:(NSDate *)date {
     
     [self.myEventsDataController addEventWithName:name location:location desc:desc date:date];
     [self.navControl setSelectedSegmentIndex:MY_EVENTS];
-    [self.eventsTableView reloadData];
+    self.currentDataController = MY_EVENTS;
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.eventsTableView reloadData];
+    [self.eventsTableView reloadData];
 }
 
 - (void)eventsViewControllerDidBookmark:(EventsDetailViewController *)controller name:(NSString *)name location:(NSString *)location desc:(NSString *)desc date:(NSDate *)date {
     [self.bookmarkedEventsDataController addEventWithName:name location:location desc:desc date:date];
     [self.navControl setSelectedSegmentIndex:BOOKMARKED_EVENTS];
-    [self.eventsTableView reloadData];
+    self.currentDataController = BOOKMARKED_EVENTS;
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [self.eventsTableView reloadData];
+    [self.eventsTableView reloadData];
 }
 
 @end
