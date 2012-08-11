@@ -111,18 +111,27 @@
 #pragma mark UITableViewDataSource
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (EventCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Event *myEvent;
     NSString *CellIdentifier = @"EventCell";
+    EventCell *cell = (EventCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
     
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-	
-	// Set up the cell
+//    if (!cell)
+//    {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"EventCell" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects)
+        {
+            if ([currentObject isKindOfClass:[EventCell class]])
+            {
+                cell = (EventCell *)currentObject;
+                break;
+            }
+        }
+//    }
+    
     switch (self.currentDataController) {
         case MY_EVENTS:
             //NSLog(@"My Events: %d", [self.myEventsDataController countOfList]);
@@ -140,10 +149,24 @@
             break;
     }
     
-    cell.textLabel.text = myEvent.name;
-    cell.detailTextLabel.text = myEvent.location;
+    // Set up the cell
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    cell.titleLabel.text = myEvent.name;
+    cell.locationLabel.text = myEvent.location;
+    cell.dateLabel.text = [dateFormatter stringFromDate:myEvent.date];
+    cell.typeLabel.text = @"Social";
     
 	return cell;
+    
+	/*UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+	
+	
+     */
 }
 
 
